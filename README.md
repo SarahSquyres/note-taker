@@ -14,6 +14,8 @@
 Note Taker helps users keep track of their busy schedules.  With Note Taker, users can easily make, save, and delete notes!
 
 ## Dependencies
+Run the following commands in CLI to install dependencies:
+
 Express 
 ```bash
 npm install express
@@ -43,10 +45,10 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 Licensed under the MIT license.
 
 ## Heroku Link
-[Deployed Heroku URL](https://polar-atoll-05727-e162f7869a1c.herokuapp.com/)
+[Heroku URL](https://polar-atoll-05727-e162f7869a1c.herokuapp.com/)
 
 ## GitHub Link
- [Git Hub Repo](https://github.com/SarahSquyres/)
+[Git Hub Repo](https://github.com/SarahSquyres/)
  
  
 

@@ -3,31 +3,31 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 const path = require('path');
 
-// GET route to get all of the notes
+// GET route to retrieve notes from database and sends back as JSON data
+// fs.readFileSync reads the database file
 router.get('/notes', (req, res) => {
     fs.readFile('./db/db.json', (err, data) => {
-        ///error logging
         if (err) throw err;
         let dbData = JSON.parse(data);
-        //Returns new database
         res.json(dbData)
     });   
 });
 
-// POST route to save notes
+// POST route saves notes to database, UUID generates a unique id for each note
 router.post('/notes', (req, res) => {
     const dbData = JSON.parse(fs.readFileSync('./db/db.json','utf8'));
-    const newFeedback = {
+    const newNotes = {
       title: req.body.title,
       text: req.body.text,
       id: uuidv4(),
     };
-    dbData.push(newFeedback);
+    dbData.push(newNotes);
     fs.writeFileSync('./db/db.json',JSON.stringify(dbData));
     res.json(dbData);
   });
 
-// DELETE route to delete notes
+// DELETE route to delete notes, :id is used as a placeholder for the ID of the note to be deleted
+// Note will be returned if the note id is not equal to the requested id 
 router.delete('/notes/:id', (req, res) => {
   let data = fs.readFileSync('./db/db.json','utf8');
   let dbData = JSON.parse(data);
@@ -48,5 +48,5 @@ router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'))
 });
 
-
+// Exports router object which allows other parts of the app to access routes
 module.exports = router;
