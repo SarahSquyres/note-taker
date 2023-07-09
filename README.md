@@ -41,6 +41,18 @@ THEN that note appears in the right-hand column
 WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
+## Application Preview
+* Landing Page
+
+![Landing Page](public/assets/images/note-taker-landing.PNG)
+
+* Add Note
+
+![Add Note](public/assets/images/note-taker-app.PNG)
+
+* Delete Note
+
+![Delete Note](public/assets/images/note-taker-delete.PNG)
 ## License
 Licensed under the MIT license.
 
