@@ -5,6 +5,7 @@
 * [Description](#description)
 * [Dependencies](#dependencies)
 * [User Story](#user-story)
+* [Application Preview](#application-preview)
 * [License](#license)
 * [Heroku Link](#heroku-link)
 * [GitHub Link](#github-link)
@@ -60,7 +61,7 @@ Licensed under the MIT license.
 [Heroku URL](https://polar-atoll-05727-e162f7869a1c.herokuapp.com/)
 
 ## GitHub Link
-[Git Hub Repo](https://github.com/SarahSquyres/)
+[Git Hub Repo](https://github.com/SarahSquyres/note-taker)
  
  
 
