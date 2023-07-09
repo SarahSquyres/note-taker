@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
-const api = require('./routes/notes');
-const notesData = require('./db/db.json')
+const api = require('./routes/notes.js');
 
 const PORT = 3001;
 
@@ -25,22 +24,10 @@ app.get('/notes', (req, res) => {
 });
 
 
-
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
 );
 
-
-// app.get = route: captures a request made to an endpoint
-// '/' = request from client. route on server capturing the request, map client request to server route
-// app.get('/', (req, res) => res.send('Navigate to /send or /routes'));
-
-// Response object, sending file back to client, join method: building path
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-  });
-  
-  app.get('/api/terms', (req, res) => res.json(termData));
 
 
 
